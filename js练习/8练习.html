@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 300px;
+				border: 1px solid red;
+			}
+			p{
+				background: red;
+
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			丁红都
+		</div>
+		<input type="" name="input1" id="input1" value="" />
+		<button id="but1">小名</button>
+		<br/>
+		<input type="" name="" id="input2" value="" />
+		<button id="but2">小白</button>
+	</body>
+	<script type="text/javascript">
+		var OBox=document.getElementById('box'); 
+		var Ipt1=document.getElementById('input1')
+		var Ipt2=document.getElementById('input2')
+		var OBtn1=document.getElementById('but1')
+		var OBtn2=document.getElementById('but2')
+		OBtn1.onclick=function(){
+//		alert(1)
+//			alert(OBox.innerHTML);
+			OBox.innerHTML='<p>'+OBox.innerHTML+input1.value+'</p>';
+		}
+		
+	</script>
+</html>

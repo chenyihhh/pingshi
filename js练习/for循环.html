@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*li{
+				list-style: none;
+				width:100px;
+				height: 100px;
+				background: red;
+				float: left;
+			}*/
+			div{
+				width: 60px;
+				height: 60px;
+				background: yellow;
+			/*	float: left;*/
+			position: absolute;
+			}
+			body{
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		var oDiv=document.getElementsByTagName('div')
+		for(var i=0;i<10;i++ ){
+			document.body.innerHTML+='<div style="left:'+i+'20px"></div>';
+//			div[i].style.='60px'
+//			div[i].style.height='60px's
+		}
+		
+//		for(var i=0;i<10;i++){
+//			oDiv[i].style.position='absolute'
+//			oDiv[i].style.left=i*70+'px'
+//				
+//		}
+	</script>
+</html>

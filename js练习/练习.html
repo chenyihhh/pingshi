@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<style type="text/css">
+			button {
+				width: 100px;
+				height: 38px;
+				background: red;
+			}
+			
+			h1 {
+				float: left;
+			}
+			
+			#box {
+				width: 100px;
+				height:100px;
+				border: 1px solid black;
+			}
+			
+			#shop {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: red;
+				top: 0;
+				left: 0;
+				background: rgba(0, 0, 0, 0.4);
+				display: none;
+			}
+			
+			#control {
+				width: 400px;
+				height: 240px;
+				border: 20px solid grey;
+				background: white;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				cursor: pointer;
+				margin-left:-220px;
+				margin-top:-140px;
+			}
+			
+			#red {
+				width: 40px;
+				height: 40px;
+				background: yellowgreen;
+				display: inline-block;
+				/*margin-left:20px;*/
+				text-align: center;
+				line-height: 40px;
+				color: white;
+			}
+			#red:hover{
+				background: red;
+			}
+			ul li em {
+				display: inline-block;
+				margin-top: 30px;
+				margin-left: 50px;
+			}
+			
+			#yelow {
+				width: 40px;
+				height: 40px;
+				background:lightgoldenrodyellow;
+				display: inline-block;
+				/*margin-left:20px;*/
+				text-align: center;
+				line-height: 40px;
+				color: white;
+			}
+			#yelow:hover{
+				background: yellow;
+			}
+			
+			#blue {
+				width: 40px;
+				height: 40px;
+				background:cornflowerblue;
+				display: inline-block;
+				/*margin-left:20px;*/
+				text-align: center;
+				line-height: 40px;
+				color: white;
+			}
+			#blue:hover{
+				background: blue;
+			}
+			#kuan {
+				width: 40px;
+				height: 36px;
+				background: gainsboro;
+				text-align: center;
+				line-height: 36px;
+				display: inline-block;
+			}
+			#kuan:hover{
+				background: burlywood;
+			}
+			#kuan3:hover{
+				background: burlywood;
+			}
+			#kuan4:hover{
+				background: burlywood;
+			}
+			#kuan3 {
+				width: 40px;
+				height: 36px;
+				background: gainsboro;
+				text-align: center;
+				line-height: 36px;
+				display: inline-block;
+			}
+			
+			#kuan4 {
+				width: 40px;
+				height: 36px;
+				background: gainsboro;
+				text-align: center;
+				line-height: 36px;
+				display: inline-block;
+			}
+			#huif{
+				width: 60px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				background: blue;
+				color: white;
+				float: left;
+				margin-left: 100px;
+				margin-right: 10px;
+				margin-top: 20px;
+			}
+			#queren{
+				width: 60px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				background: blue;
+				color: white;
+				float: left;
+				margin-left: 10px;
+				margin-right: 50px;
+				margin-top: 20px;
+			}
+			#gao{
+				width: 40px;
+				height: 36px;
+				background: gainsboro;
+				text-align: center;
+				line-height: 36px;
+				display: inline-block;
+			}
+			#gao:hover{
+				background: burlywood;
+			}
+			#gao3:hover{
+				background: burlywood;
+			}
+			#gao4:hover{
+				background: burlywood;
+			}
+			#gao3{
+				width: 40px;
+				height: 36px;
+				background: gainsboro;
+				text-align: center;
+				line-height: 36px;
+				display: inline-block;
+			}
+			#gao4{
+				width: 40px;
+				height: 36px;
+				background: gainsboro;
+				text-align: center;
+				line-height: 36px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>请为虾米的div设置样式：</h1>
+		<button id="but">点击设置</button>
+		<div id="box"></div>
+		<div id="shop">
+			<div id="control">
+				<ul>
+					<li>
+						<em>
+							请选择背景色:
+						</em>
+
+						<div id="red">红</div>
+						<div id="yelow">黄</div>
+						<div id="blue">蓝</div>
+					</li>
+					<li>
+						<em>
+								请选择宽(px):
+						</em>
+
+						<div id="kuan">200</div>
+						<div id="kuan3">300</div>
+						<div id="kuan4">400</div>
+					</li>
+					<li>
+						<em>
+								请选择宽(px):
+						</em>
+
+						<div id="gao">200</div>
+						<div id="gao3">300</div>
+						<div id="gao4">400</div>
+					</li>
+				</ul>
+				<div id="huif">
+					恢复
+				</div>
+				<div id="queren">确认</div>
+			</div>
+		</div>
+	</body>
+<script type="text/javascript">
+	var bt=document.getElementById('but');
+	bt.onclick=function(){
+	document.getElementById('shop').style.display='block';
+	}
+	document.getElementById('red').onclick=function(){
+		document.getElementById('box').style.background='red';
+	}
+	document.getElementById('yelow').onclick=function(){
+		document.getElementById('box').style.background='yellow';
+	}
+	document.getElementById('blue').onclick=function(){
+		document.getElementById('box').style.background='blue';
+	}
+	document.getElementById('kuan').onclick=function(){
+		document.getElementById('box').style.width='200px';
+	}
+	document.getElementById('kuan3').onclick=function(){
+		document.getElementById('box').style.width='300px';
+	}
+	document.getElementById('kuan4').onclick=function(){
+		document.getElementById('box').style.width='400px';
+	}
+		document.getElementById('gao').onclick=function(){
+		document.getElementById('box').style.height='200px';
+	}
+	document.getElementById('gao3').onclick=function(){
+		document.getElementById('box').style.height='300px';
+	}
+	document.getElementById('gao4').onclick=function(){
+		document.getElementById('box').style.height='400px';
+	}
+	document.getElementById('huif').onclick=function(){
+		document.getElementById('box').style.height='100px';
+		document.getElementById('box').style.width='100px';
+		document.getElementById('box').style.background='white';
+	}
+	
+</script>
+</html>

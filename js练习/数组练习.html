@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="box"  src="img/timg555.jpg" />
+	</body>
+	<script type="text/javascript">
+		var arr=['img/timg555.jpg','img/timg.jpg','img/dstrdfgf_06.png','img/完美聊天窗_03.png']
+		var oBox=document.getElementById('box')
+		var oM=0
+		oBox.onclick=function(){
+			if(oM<arr.length-1){
+				oM=oM+1
+			}else{
+				oM=0
+			}
+			oBox.src=arr[oM]
+		}
+	</script>
+</html>

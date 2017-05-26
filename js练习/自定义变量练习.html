@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				margin: 0;
+				padding: 0;
+			}
+			img{
+				width: 300px;
+				height: 300px;
+			}
+			li{
+				list-style: none;
+				width: 30px;
+				height: 30px;
+				background: #d8d8d8;
+				border-radius:50% ;
+				float: left;
+				margin-right: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="img" src="img/hhh1.jpg">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+	</body>
+	<script type="text/javascript">
+		var oImg=document.getElementById('img')
+		var arrLi=document.getElementsByTagName('li')
+		var arrImg=['img/hhh1.jpg','img/hhh2.jpg','img/hhh3.jpg','img/hhh4.jpg']
+		
+		for(var i=0;i<arrLi.length;i++){
+			arrLi[i].mun=i;
+			arrLi[i].onclick=function(){
+//				alert()
+				oImg.src=arrImg[this.mun]
+				for(var i=0;i<arrLi.length;i++){
+					arrLi[i].style.background='#d8d8d8';
+				};	this.style.background='red'
+			}
+		}
+	</script>
+</html>

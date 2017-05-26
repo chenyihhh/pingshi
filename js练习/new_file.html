@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			.head{
+				width: 100%;
+				height: 50px;
+				background: black;
+				/*position: relative;*/
+			}
+			#list>li{
+				list-style: none;
+				color: red;
+				float: left;
+				padding:20px 40px;
+				/*border: 1px solid red;*/
+			}
+			#list li ul{
+				margin-top:8px;
+				/*border: 1px solid red;*/
+				
+				
+			}
+			#list li ul{
+				/*padding: 0px 29px;*/
+				display: none;
+				
+			}
+			#list li ul li:hover{
+				background:blue;
+				/*height: 150%;*/
+				/*width: 150%;*/
+				/*width: 150%;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;*/
+				
+			}
+			#list>li{
+				position: relative;
+			}
+			#list li ul{
+				position: absolute;
+				width: 50px;
+			}
+			#list li ul li{
+				position: relative;
+				text-align: center;
+				background: yellow;
+				width: 100px;
+				top:2px;
+				left: -10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="head">
+			<ul id="list">
+				<li>首页</li>
+				<li id="nb">
+					图标库
+					<ul id="box">
+						<li>官方图标库</li>
+						<li>多色图标库</li>
+						<li>所有图标库</li>
+					</ul>
+				</li>
+				<li>
+					图标管理
+					<ul id="box">
+						<li>官方图标库</li>
+						<li>多色图标库</li>
+						<li>所有图标库</li>
+					</ul>
+				</li>
+				<li>帮助</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		document.getElementById('nb').onmouseover=function(){
+//			document.getElementById("box").style.display="";
+			document.getElementById('box').style.display='block';
+		}
+		document.getElementById('nb').onmouseout=function(){
+			document.getElementById('box').style.display='none';
+		}
+	</script>
+</html>
