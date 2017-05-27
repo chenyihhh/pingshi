@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			#box{
+			width: 790px;
+			height: 340px;
+			border: 1px solid red;	
+			position: relative;
+			}
+			ul{
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				left: 50%;
+				margin-left: -100px;
+				bottom:10px;
+				/*border: 1px solid yellow;*/
+				border-radius:15px ;
+				width: 200px;
+				height: 20px;
+				padding: 5px 6px;
+				/*background: white;*/
+				background: rgba(0,0,0,0.5);
+				
+			}
+			li{
+				/*margin: 0;
+				padding: 0;*/
+				list-style: none;
+				width: 20px;
+				height: 20px;
+				background: white;
+				border-radius:50% ;
+				float: left;
+				margin-right:5px;
+				/*margin: auto;*/
+			}
+			span{
+				width: 30px;
+				height: 60px;
+   				background-color: #333;
+    			background-color: rgba(0,0,0,.1);
+    			line-height: 60px;
+    			text-align: center;
+    			position: absolute;
+    			top: 50%;
+    			margin-top: -30px;
+    			cursor: pointer;
+    			/*display: none;*/
+			}
+			span:hover{
+				background:rgba(0,0,0,0.6);
+			}
+			#but2{
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img id="banner" src="img/jdlbt/jdlb1.jpg" />
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<span id="but"><</span>
+			<span id="but2">></span>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var oImg=document.getElementById('banner')
+		var arrLi=document.getElementsByTagName('li')
+		var oBut2=document.getElementById('but2')
+		var oBut=document.getElementById('but')
+		var arrImg=['img/jdlbt/jdlb1.jpg','img/jdlbt/jdlb2.jpg','img/jdlbt/jdlb3.jpg','img/jdlbt/jdlb4.jpg',
+		'img/jdlbt/jdlb5.jpg','img/jdlbt/jdlb6.jpg','img/jdlbt/jdlb7.jpg','img/jdlbt/jdlb8.jpg']
+		for(var i=0;i<8;i++){
+			arrLi[i].mun=i
+			arrLi[i].onmouseover=function(){
+				mu=this.mun
+				oImg.src=arrImg[this.mun]
+				for(var i=0;i<arrLi.length;i++){
+					arrLi[i].style.background='white'
+				}
+				this.style.background='red';
+			}
+		}
+		var mu=0;
+		oBut2.onclick=function(){
+			if(mu<arrImg.length-1){
+				mu=mu+1
+			}else{
+				mu=0
+			}
+			oImg.src=arrImg[mu];
+			for(var i=0;i<arrLi.length;i++){
+				arrLi[i].style.background='white'
+			}
+			arrLi[mu].style.background='red'
+			
+		}
+		oBut.onclick=function(){
+			if(mu>0){
+				mu=mu-1
+			}else{
+				mu=arrImg.length-1
+			}
+			oImg.src=arrImg[mu]
+			for(var i=0;i<arrLi.length;i++){
+				arrLi[i].style.background='white'
+			}
+			arrLi[mu].style.background='red'
+			
+		}
+	</script>
+</html>
