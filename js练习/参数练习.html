@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<ul id="laln">
+			<li>
+				<button>-</button>
+				<input type="text" name="" class="input" value="" />
+				<button>+</button>
+			</li>
+			<li>
+				<button>-</button>
+				<input type="text" name="" class="input" value="" />
+				<button>+</button>
+			</li>
+			<li>
+				<button>-</button>
+				<input type="text" name="" class="input" value="" />
+				<button>+</button>
+			</li>
+			<li>
+				<button>-</button>
+				<input type="text" name="" class="input" value="" />
+				<button>+</button>
+			</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var oLaln=document.getElementById('laln')
+		var aLi=oLaln.getElementsByTagName('li');
+		var mun=0
+		for(var i=0;i<aLi.length;i++){
+			fn(aLi[i]);
+		}
+		function fn(cot){
+		var oBnt=cot.getElementsByTagName('button')[0]
+		var oBnt2=cot.getElementsByTagName('button')[1]
+		var oInp=cot.getElementsByClassName('input')[0]
+		oInp.value=mun
+		oBnt.onclick=function(){
+			mun--
+			oInp.value=mun
+		}
+		oBnt2.onclick=function(){
+			mun++
+			oInp.value=mun
+		}
+		}
+	</script>
+</html>
